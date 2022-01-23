@@ -136,7 +136,7 @@ header{
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    top: 42%;
+    top: 45%;
     left: 0px;
 }
 #header-pattern-right{
@@ -305,13 +305,6 @@ footer a{
 }
 
 // Media Queries
-@media (max-width: 400px) {
-    .header-img{
-        width: 220px;
-        height: 350px;
-        background-size: contain;
-    }
-}
 @media (min-width: 900px) {
     header{
         width: 100%;
