@@ -32,11 +32,14 @@ li{
 }
 .view-plan-link{
     padding: 11px 25px;
-    border: 1px solid white;
-    font-weight: 700;
+    border: 2px solid white;
     font-size: 0.9rem;
     color: var(--Very-Light-Gray);
-    width: fit-content;
+    // width: fit-content;
+}
+.view-plan-link:hover{
+    background-color: white !important;
+    color: var(--Very-Dark-Violet) !important;
 }
 .line{
     width: 200px;
@@ -53,10 +56,7 @@ nav{
     position: fixed;
     background-color: white;
     width: 100%;
-}
-.view-plan-link:hover{
-    background: white;
-    color: var(--Dark-Violet);
+    z-index: 2;
 }
 
 // Navigation Menu
@@ -71,7 +71,6 @@ nav{
     transition: 0.3s ease;
     background: var(--Very-Dark-Violet);
     padding: 40px 40px 0px 40px;
-    z-index: 10;
 }
 .nav-menu.active{
     left: 0;
@@ -99,9 +98,6 @@ nav{
         color:rgb(226, 209, 209);
     }
     .view-plan-link{
-        border: 1px solid white;
-        color: white;
-        font-weight: 400;
         padding: 15px 70px;
     }
     .view-plan-link:hover{
@@ -132,7 +128,6 @@ header{
     flex-direction: column-reverse;
     width: 100vw;
     position: relative;
-    z-index: -2;
 }
 #header-pattern-left{
     background: url("images/mobile/bg-pattern-intro-left-mobile.svg");
@@ -143,7 +138,6 @@ header{
     position: absolute;
     top: 42%;
     left: 0px;
-    z-index: -1;
 }
 #header-pattern-right{
     background: url("images/mobile/bg-pattern-intro-right-mobile.svg");
@@ -154,7 +148,6 @@ header{
     position: absolute;
     bottom: -15%;
     right: 0px;
-    z-index: -1;
 }
 #header-line{
     display: none;
@@ -224,7 +217,6 @@ header{
     width: fit-content;
     text-align: center;
     position: relative;
-    z-index: -1;
 }
 #info-pattern{
     background: url("images/mobile/bg-pattern-how-we-work-mobile.svg");
@@ -253,7 +245,6 @@ footer{
     background-color: var(--Very-Light-Gray);
     padding: 50px 0px 50px;
     position: relative;
-    z-index: -1;
 }
 footer a{
     display: block;
