@@ -166,7 +166,7 @@ header {
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
-  top: 44.5%;
+  top: 58.5%;
   left: 0px;
 }
 
@@ -390,7 +390,7 @@ footer a {
     background-size: cover;
   }
   #header-pattern-left {
-    top: 39%;
+    top: 51%;
   }
 }
 
