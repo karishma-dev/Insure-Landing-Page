@@ -35,7 +35,6 @@ li{
     border: 2px solid white;
     font-size: 0.9rem;
     color: var(--Very-Light-Gray);
-    // width: fit-content;
 }
 .view-plan-link:hover{
     background-color: white;
@@ -53,6 +52,7 @@ nav{
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    gap: 21vw;
     position: fixed;
     background-color: white;
     width: 100%;
@@ -126,6 +126,7 @@ header{
     justify-content: center;
     align-items: center;
     flex-direction: column-reverse;
+    gap: 20vw;
     width: 100vw;
     position: relative;
 }
@@ -136,7 +137,7 @@ header{
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    top: 45%;
+    top: 44.5%;
     left: 0px;
 }
 #header-pattern-right{
@@ -169,8 +170,8 @@ header{
     background-image: url("images/mobile/image-intro-mobile.jpg");
     width: 100%;
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 460px;
+    background-size: 99.9vw 100vh;
+    height: 100vh;
     margin: 0 auto 50px auto;
 }
 
@@ -186,10 +187,10 @@ header{
     margin: 0 auto 40px auto;
 }
 .about-col-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    place-content: center;
+    row-gap: 100px;
     text-align: center;
 }
 .about-col{
@@ -305,10 +306,16 @@ footer a{
 }
 
 // Media Queries
-@media (min-width: 900px) {
-    header{
-        width: 100%;
+@media (max-width: 400px) {
+    .header-img{
+        height: 70vh;
+        background-size: cover;
     }
+    #header-pattern-left{
+        top: 39%;
+    }
+}
+@media (min-width: 900px) {
     nav{
         justify-content: space-around;
         background-color: white;
@@ -348,6 +355,9 @@ footer a{
     .hamburger{
         display: none;
     }
+   
+}
+@media (min-width:800px) {
     header{
         flex-direction: row;
         padding-top: 40px;
@@ -355,7 +365,8 @@ footer a{
     .header-img{
         background-size: contain;
         width: 400px;
-        margin: 50px auto 0px auto;
+        height: 450px;
+        margin: 100px auto 0px auto;
     }
     #header-pattern-left{
         background: url("images/desktop/bg-pattern-intro-left-desktop.svg");
@@ -385,10 +396,12 @@ footer a{
         margin-top: 30px;
     }
     .about-col-container{
-        flex-direction: row;
-        text-align: start;
-        justify-content: space-around;
-        margin: 80px 0px;
+       grid-template-columns: repeat(3, auto);
+       column-gap: 3vw;
+       grid-template-rows: auto;
+       row-gap: 0px;
+       margin: 80px 0px;
+       text-align: start;
     }
     .about-col{
         margin: 0px 15px;
@@ -406,7 +419,7 @@ footer a{
         text-align: start;
         display: grid;
         grid-template-columns: repeat(2, auto);
-        column-gap: 250px;
+        column-gap: 30vw;
         margin: 0 auto 100px auto;
         width: fit-content;
     }
@@ -430,19 +443,19 @@ footer a{
         width: 100%;
     }
     footer hr{
-        width: 60%;
+        width: 73%;
         margin: 0 auto;
     }
     .social-links{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        column-gap: 160%;
+        column-gap: 51.5vw;
         width: fit-content;
         margin: 0 auto;
     }
     .footer-links-container{
-        grid-template-columns: repeat(4, auto);
-        column-gap: 200px;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 15vw;
         text-align: start;
         position: relative;
         z-index: 1;
@@ -484,6 +497,7 @@ footer a{
         background-size: cover;
         width: 450px;
         height: 550px;
+        margin: 0px auto;
         position: relative;
         top: 150px;
         right: 6.5%;
@@ -495,8 +509,11 @@ footer a{
     }
 }
 @media (min-width: 2400px) {
+    .header-text{
+        margin: 0px auto;
+    }
     .about-col-container{
-        column-gap: 200px;
+        column-gap: 10vw;
     }
 }
 

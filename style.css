@@ -59,6 +59,7 @@ nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 20px;
+  gap: 21vw;
   position: fixed;
   background-color: white;
   width: 100%;
@@ -153,6 +154,7 @@ header {
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
+  gap: 20vw;
   width: 100vw;
   position: relative;
 }
@@ -164,7 +166,7 @@ header {
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
-  top: 45%;
+  top: 44.5%;
   left: 0px;
 }
 
@@ -203,8 +205,8 @@ header {
   background-image: url("images/mobile/image-intro-mobile.jpg");
   width: 100%;
   background-repeat: no-repeat;
-  background-size: cover;
-  height: 460px;
+  background-size: 99.9vw 100vh;
+  height: 100vh;
   margin: 0 auto 50px auto;
 }
 
@@ -222,19 +224,12 @@ header {
 }
 
 .about-col-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (auto)[3];
+      grid-template-rows: repeat(3, auto);
+  place-content: center;
+  row-gap: 100px;
   text-align: center;
 }
 
@@ -389,10 +384,17 @@ footer a {
   text-decoration: underline;
 }
 
-@media (min-width: 900px) {
-  header {
-    width: 100%;
+@media (max-width: 400px) {
+  .header-img {
+    height: 70vh;
+    background-size: cover;
   }
+  #header-pattern-left {
+    top: 39%;
+  }
+}
+
+@media (min-width: 900px) {
   nav {
     -ms-flex-pack: distribute;
         justify-content: space-around;
@@ -440,6 +442,9 @@ footer a {
   .hamburger {
     display: none;
   }
+}
+
+@media (min-width: 800px) {
   header {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -450,7 +455,8 @@ footer a {
   .header-img {
     background-size: contain;
     width: 400px;
-    margin: 50px auto 0px auto;
+    height: 450px;
+    margin: 100px auto 0px auto;
   }
   #header-pattern-left {
     background: url("images/desktop/bg-pattern-intro-left-desktop.svg");
@@ -491,14 +497,15 @@ footer a {
     margin-top: 30px;
   }
   .about-col-container {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    text-align: start;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -ms-grid-columns: (auto)[3];
+        grid-template-columns: repeat(3, auto);
+    -webkit-column-gap: 3vw;
+            column-gap: 3vw;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    row-gap: 0px;
     margin: 80px 0px;
+    text-align: start;
   }
   .about-col {
     margin: 0px 15px;
@@ -519,8 +526,8 @@ footer a {
     display: grid;
     -ms-grid-columns: (auto)[2];
         grid-template-columns: repeat(2, auto);
-    -webkit-column-gap: 250px;
-            column-gap: 250px;
+    -webkit-column-gap: 30vw;
+            column-gap: 30vw;
     margin: 0 auto 100px auto;
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -546,7 +553,7 @@ footer a {
     width: 100%;
   }
   footer hr {
-    width: 60%;
+    width: 73%;
     margin: 0 auto;
   }
   .social-links {
@@ -554,18 +561,18 @@ footer a {
     display: grid;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
-    -webkit-column-gap: 160%;
-            column-gap: 160%;
+    -webkit-column-gap: 51.5vw;
+            column-gap: 51.5vw;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     margin: 0 auto;
   }
   .footer-links-container {
-    -ms-grid-columns: (auto)[4];
-        grid-template-columns: repeat(4, auto);
-    -webkit-column-gap: 200px;
-            column-gap: 200px;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    -webkit-column-gap: 15vw;
+            column-gap: 15vw;
     text-align: start;
     position: relative;
     z-index: 1;
@@ -612,6 +619,7 @@ footer a {
     background-size: cover;
     width: 450px;
     height: 550px;
+    margin: 0px auto;
     position: relative;
     top: 150px;
     right: 6.5%;
@@ -624,9 +632,12 @@ footer a {
 }
 
 @media (min-width: 2400px) {
+  .header-text {
+    margin: 0px auto;
+  }
   .about-col-container {
-    -webkit-column-gap: 200px;
-            column-gap: 200px;
+    -webkit-column-gap: 10vw;
+            column-gap: 10vw;
   }
 }
 
