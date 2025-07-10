@@ -19,7 +19,7 @@ This is a solution to the [Insure landing page challenge on Frontend Mentor](htt
 
 Users should be able to:
 
-- View the optimal layout for the site depending on their device's screen size
+- View the optimal layout for the site depending on the device's screen size
 - See hover states for all interactive elements on the page
 
 ### Screenshot
@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/Krrish105/Insure-Landing-Page](https://github.com/Krrish105/Insure-Landing-Page)
-- Live Site URL: [https://krrish105.github.io/Insure-Landing-Page/](https://krrish105.github.io/Insure-Landing-Page/)
+- Solution URL: [https://github.com/karishma-dev/Insure-Landing-Page](https://github.com/karishma-dev/Insure-Landing-Page)
+- Live Site URL: [https://karishma-dev.github.io/Insure-Landing-Page/](https://karishma-dev.github.io/Insure-Landing-Page/)
 ## My process
 
 ### Built with
@@ -43,7 +43,7 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [Krrish105](https://www.frontendmentor.io/profile/Krrish105)
+- Frontend Mentor - [karishma-dev](https://www.frontendmentor.io/profile/karishma-dev)
 - Twitter - [_karishma10](https://twitter.com/_karishma10)
-- Codepen - [Krrish105](https://codepen.io/krrish105)
+- Codepen - [karishma-dev](https://codepen.io/karishma-dev)
 
